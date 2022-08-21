@@ -1,0 +1,22 @@
+<table class="table table-striped text-center">
+  <thead>
+    <tr class="table table-dark">
+      <th *ngFor="let field of FIELDS">{{ field }}</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.lastname }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.email }}</td>
+      <td class="d-flex justify-content-around">
+        <button class="btn btn-info" (click)="editClick(user)">Editar</button>
+        <button class="btn btn-danger" (click)="deleteClick(user._id)">
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

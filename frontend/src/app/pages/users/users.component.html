@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <h1>Usuarios</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <app-userForm
+        [model]="model"
+        (createUser)="createUser($event)"
+        (updateUser)="updateUser($event)"
+      ></app-userForm>
+    </div>
+    <div class="col-md-8">
+      <app-table
+        [FIELDS]="FIELDS"
+        [users]="users"
+        (handleEdit)="editUser($event)"
+        (handleDelete)="deleteUser($event)"
+      ></app-table>
+    </div>
+  </div>
+</div>

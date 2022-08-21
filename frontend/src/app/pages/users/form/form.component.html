@@ -1,0 +1,62 @@
+<div class="card">
+  <form #userForm="ngForm">
+    <div class="card-body bg-light">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input hidden type="text" id="_id" name="_id" [(ngModel)]="model._id" />
+
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Nombre"
+          name="name"
+          [(ngModel)]="model.name"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="lastname" class="form-label">Apellido</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastname"
+          placeholder="Apellido"
+          name="lastname"
+          [(ngModel)]="model.lastname"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Telefono</label>
+        <input
+          type="number"
+          class="form-control"
+          id="phone"
+          placeholder="Telefono"
+          [(ngModel)]="model.phone"
+          name="phone"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electronico</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="nombre@ejemplo.com"
+          name="email"
+          [(ngModel)]="model.email"
+        />
+      </div>
+    </div>
+
+    <div class="card-footer d-flex justify-content-around">
+      <button (click)="resetForm(userForm)" class="btn btn-danger">
+        Cancelar
+      </button>
+      <button (click)="handleSubmit(userForm)" class="btn btn-primary">Guardar</button>
+    </div>
+  </form>
+</div>
